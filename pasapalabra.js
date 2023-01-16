@@ -178,9 +178,6 @@ const initialQuestions = [
 let endTime;
 let puntos;
 let time;
-let contador;
-const arrUsers = [];
-let userName;
 let pasapalabraAlert = false;
 
 let questions = [...initialQuestions];
@@ -216,8 +213,6 @@ const focus = () => {
 };
 
 const next = () => {
-  console.log("index", actualIndexQuestion);
-  console.log("question lentgh", questions.length);
   if (actualIndexQuestion === questions.length) {
     questions = questions.filter((question) => question.status === 2);
     debugger;
@@ -239,9 +234,6 @@ const updateUI = () => {
     questions[actualIndexQuestion].question;
 
   letterInQuestion = questions[actualIndexQuestion].letter;
-  console.log("letra en la que estoy", letterInQuestion);
-  console.log("indice del arreglo actual", actualIndexQuestion);
-  console.log("arreglopasapalabra", questions);
   letterToPaint = document.getElementById(`${letterInQuestion}`);
   letterToPaint.classList.remove("green");
   letterToPaint.classList.remove("incorrect");
@@ -258,8 +250,6 @@ const verifyAnswer = () => {
     swal("respuesta correcta, has ganado 1 punto!", "", "success").then(() => {
       focus();
     });
-
-    //alert("bien");
     puntos++;
     letterToPaint.classList.remove("gray");
     letterToPaint.classList.remove("yellow");
@@ -305,7 +295,9 @@ const pasapalabra = () => {
   questions[actualIndexQuestion].status = 2;
   if (pasapalabraAlert === false) {
     swal(
-      "cada respuesta que responda con  PASAPALABRA, se le repetirá al terminar"
+      "cada respuesta que responda con  PASAPALABRA, se le repetirá al terminar",
+      "",
+      "info"
     ).then(() => {
       focus();
     });
@@ -330,7 +322,9 @@ const endProgram = () => {
   document.getElementById("questions").innerHTML = "FIN";
   if (endTime === false) {
     swal(
-      `has terminado el juego en ${time} segundos, has ganado ${puntos} puntos! `
+      `has terminado el juego en ${time} segundos, has ganado ${puntos} puntos! `,
+
+      "info"
     );
   }
   if (endTime === true) {
@@ -349,8 +343,6 @@ const timer = () => {
   clearInterval(tiempoRegresivoId);
 
   let mostrarTiempo = document.getElementById("temporizador");
-
-  console.log("tiempo", mostrarTiempo);
 
   tiempoRegresivoId = setInterval(() => {
     time--;

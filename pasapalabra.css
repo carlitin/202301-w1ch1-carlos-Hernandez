@@ -1,26 +1,24 @@
 body html {
     width: 100%;
-
-
+    
+   
     background-color: #fff;
-    background-image: linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef), linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef);
+        background-image: linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef), linear-gradient(45deg, #efefef 25%, rgba(239, 239, 239, 0) 25%, rgba(239, 239, 239, 0) 75%, #efefef 75%, #efefef);
     height: fit-content;
 
 }
 
 
-.gray {
-    background-color: gray;
-    font-size: 40px;
-}
+.gray{background-color: gray;
+font-size: 40px;}
 
 .green {
-    background-color: green;
+    background-color: green; 
     font-size: 24px;
-    color: white;
+    color: white; 
 }
 
-.yellow {
+.yellow{
     background-color: yellow;
     font-size: 24px;
     color: black;
@@ -32,13 +30,13 @@ body html {
     color: black;
 }
 
-span alert {
+span alert{
     background-color: yellow;
 }
 
 main {
     height: fit-content;
-
+   
 }
 
 
@@ -69,7 +67,7 @@ ul {
     height: 250px;
     display: flex;
     flex-direction: row;
-
+    
 
 
 }
@@ -89,26 +87,25 @@ header {
     margin-top: 15px;
     margin-bottom: 30px;
     width: 220px;
-    background-color: steelblue;
+    background-color:steelblue;
     color: white;
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
 }
-
-.button-div {
+.button-div{
     width: 100%;
-    display: flex;
+ display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-
+       justify-content: space-evenly; 
+    
 }
 
 .button-question {
-
+    
     margin-top: 25px;
     margin-bottom: 30px;
-    width: 160px;
+    width:160px;
     padding: 4px 25px 4px 25px;
     background-color: steelblue;
     color: white;
@@ -118,12 +115,12 @@ header {
 }
 
 .section {
-    width: 30%;
+ width: 30%;
     height: 100px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-left: 60px;
+align-items: center;
+justify-content:space-between;
+padding-left: 60px;
 }
 
 .section1 {
@@ -137,16 +134,16 @@ header {
 
 .section1 input {
     width: 80%;
-    font-size: 20px;
+ font-size: 20px;
     text-align: center;
     border-radius: 10px;
     padding: 10px;
-
+  
 }
 
 #questions {
     display: inline-table;
-    min-width: 140px;
+    min-width:140px;
     min-height: 40px;
     text-align: left;
     line-height: 35px;
@@ -196,9 +193,9 @@ li {
     font-size: 24px;
     font-weight: bold;
     color: #214969;
-
+    
 }
 
-.disabled {
+.disabled{
     pointer-events: none;
 }
